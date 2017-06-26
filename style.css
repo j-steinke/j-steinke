@@ -1,9 +1,14 @@
 body
 {
 	color: black;
+	font-family: Georgia, serif;
 }
-
+h1
+{
+	font-size: 40px;
+}
 p
 {
 	text-align: center;
+	font-size: 14px;
 }

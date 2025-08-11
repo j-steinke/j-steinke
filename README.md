@@ -1,5 +1,5 @@
 <!-- Hero -->
-<h1 align="center">JON STEINKE — Resume & Portfolio</h1>
+<h1 align="center">Jon Steinke — Resume & Portfolio</h1>
 <p align="center">
   <a href="mailto:jonsteinke@gmail.com">Email</a> ·
   <a href="https://www.linkedin.com/in/">LinkedIn</a> ·
@@ -9,8 +9,10 @@
 ---
 
 ## About
-Short intro: McGeorge Law Student  (2L) with a passion for AI, healthcare regulation, and general civil law affairs. Programming on the side!
+McGeorge Law Student  (2L) with a passion for AI, healthcare regulation, and general civil law affairs. Programming on the side!
+
 **Focus:** Healthcare litigation, primarily within the medical malpractice context. Always looking to learn more!
+
 **Location:** Based out of Sacramento, CA.
 
 ## Skills
@@ -31,6 +33,7 @@ Short intro: McGeorge Law Student  (2L) with a passion for AI, healthcare regula
 
 ## Education
 **J.D. — McGeorge School of Law**, Expected Graduation: June 2027
+
 **BA in Economics — UC Davis**, Graduated June 2021
 
 ## Writing

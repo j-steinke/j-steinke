@@ -4,83 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jon Steinke · Portfolio</title>
-  <meta name="description" content="Portfolio and resume of Jon Steinke. Projects, experience, writing, and contact. Work in progress!">
+  <meta name="description" content="Portfolio and resume of Jon Steinke. Projects, experience, and contact.">
   <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="Jon Steinke · Portfolio (WIP)">
-  <meta property="og:description" content="Projects, experience, writing, and contact.">
+  <meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jon Steinke · Portfolio">
+  <meta property="og:description" content="Law student who dabbles in programming. Open to opportunities in the legal field.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-domain-or-github-pages-url">
-  <meta property="og:image" content="https://your-domain-or-github-pages-url/og.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://j-steinke.github.io">
+  <meta property="og:image" content="https://j-steinke.github.io/og.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://j-steinke.github.io">
+
   <link rel="icon" href="favicon.png">
   <style>
     :root{
-      --bg: #0b0c0f;
-      --bg-soft: #12141a;
-      --text: #e6e6e6;
-      --muted: #a8b0bb;
-      --brand: #7aa2ff;
-      --accent: #6ee7b7;
-      --card: #151922;
-      --border: #253042;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --bg:#0b0c0f; --bg-soft:#12141a; --text:#e6e6e6; --muted:#a8b0bb; --brand:#7aa2ff; --accent:#6ee7b7;
+      --card:#151922; --border:#253042; --shadow:0 10px 30px rgba(0,0,0,.35)
     }
     @media (prefers-color-scheme: light){
       :root{
-        --bg: #f7f8fb;
-        --bg-soft: #ffffff;
-        --text: #0e1726;
-        --muted: #46566f;
-        --brand: #2b5cff;
-        --accent: #0fb981;
-        --card: #ffffff;
-        --border: #e6eaf2;
-        --shadow: 0 10px 30px rgba(27, 39, 63, .08);
+        --bg:#f7f8fb; --bg-soft:#fff; --text:#0e1726; --muted:#46566f; --brand:#2b5cff; --accent:#0fb981;
+        --card:#fff; --border:#e6eaf2; --shadow:0 10px 30px rgba(27,39,63,.08)
       }
     }
-    html[data-theme="light"]{
-      color-scheme: light;
-      --bg: #f7f8fb; --bg-soft:#fff; --text:#0e1726; --muted:#46566f; --brand:#2b5cff; --accent:#0fb981; --card:#fff; --border:#e6eaf2; --shadow:0 10px 30px rgba(27,39,63,.08);
-    }
-    html[data-theme="dark"]{
-      color-scheme: dark;
-      --bg: #0b0c0f; --bg-soft:#12141a; --text:#e6e6e6; --muted:#a8b0bb; --brand:#7aa2ff; --accent:#6ee7b7; --card:#151922; --border:#253042; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
+    html[data-theme="light"]{color-scheme:light; --bg:#f7f8fb; --bg-soft:#fff; --text:#0e1726; --muted:#46566f; --brand:#2b5cff; --accent:#0fb981; --card:#fff; --border:#e6eaf2; --shadow:0 10px 30px rgba(27,39,63,.08)}
+    html[data-theme="dark"]{color-scheme:dark; --bg:#0b0c0f; --bg-soft:#12141a; --text:#e6e6e6; --muted:#a8b0bb; --brand:#7aa2ff; --accent:#6ee7b7; --card:#151922; --border:#253042; --shadow:0 10px 30px rgba(0,0,0,.35)}
+
     *{box-sizing:border-box}
     body{
-      margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(80vw 50vh at 70% -10%, rgba(123, 92, 255,.18), transparent 60%), radial-gradient(80vw 60vh at -10% 0%, rgba(15, 185, 129,.12), transparent 60%), var(--bg);
-      color:var(--text);
+      margin:0; font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(80vw 50vh at 70% -10%, rgba(123,92,255,.18), transparent 60%),
+                  radial-gradient(80vw 60vh at -10% 0%, rgba(15,185,129,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text)
     }
     a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1000px; margin:0 auto; padding:24px}
     header{
-      position:sticky; top:0; z-index:10; backdrop-filter: blur(8px);
-      background: color-mix(in srgb, var(--bg-soft) 75%, transparent);
-      border-bottom:1px solid var(--border);
+      position:sticky; top:0; z-index:10; backdrop-filter:blur(8px);
+      background:color-mix(in srgb, var(--bg-soft) 75%, transparent); border-bottom:1px solid var(--border)
     }
     .bar{display:flex; align-items:center; justify-content:space-between; gap:16px}
     nav a{margin:0 10px; font-weight:600; color:var(--muted)}
     nav a:hover{color:var(--text)}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); box-shadow:var(--shadow);
-    }
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); box-shadow:var(--shadow)}
     .btn:hover{transform:translateY(-1px)}
-    .hero{
-      padding:64px 0 32px; display:grid; grid-template-columns:1fr; gap:24px; align-items:center;
-    }
+    .hero{padding:64px 0 32px; display:grid; grid-template-columns:1fr; gap:24px; align-items:center}
     .hero h1{font-size:42px; line-height:1.1; margin:0}
     .hero p{margin:8px 0 0; color:var(--muted); max-width:70ch}
-    .pill{
-      display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:14px; color:var(--muted); background:color-mix(in srgb, var(--card) 85%, transparent);
-    }
-    .grid{
-      display:grid; gap:16px; grid-template-columns:repeat(12, 1fr);
-    }
-    .card{
-      grid-column:span 12; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow);
-    }
+    .pill{display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:14px; color:var(--muted); background:color-mix(in srgb, var(--card) 85%, transparent)}
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(12, 1fr)}
+    .card{grid-column:span 12; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)}
     .card h3{margin:0 0 6px}
     .meta{color:var(--muted); font-size:14px}
     .row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
@@ -95,6 +74,8 @@
     .projects .links{display:flex; gap:12px; flex-wrap:wrap; margin-top:6px}
     .projects .links a{font-weight:600}
     .split{display:grid; grid-template-columns:1fr; gap:16px}
+    .muted{color:var(--muted)}
+
     @media (min-width:720px){
       .hero{grid-template-columns:auto 1fr; gap:24px}
       .projects .card{grid-template-columns:1fr auto; align-items:center}
@@ -103,57 +84,59 @@
       .card.span-4{grid-column:span 4}
       .card.span-3{grid-column:span 3}
     }
+
     /* Print */
     @media print{
       header, .btn-theme, .pill, .tags, .links{display:none !important}
       body{background:#fff; color:#000}
       .card, .container{box-shadow:none; border:1px solid #ddd}
     }
+
     /* Skip link */
     .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
     .skip:focus{left:8px; top:8px; width:auto; height:auto; padding:8px 12px; background:#000; color:#fff; border-radius:8px}
+
     /* Theme toggle */
     .btn-theme{border:1px solid var(--border); background:var(--card); border-radius:12px; padding:8px; display:inline-flex; align-items:center; cursor:pointer}
     .icons{display:grid; place-items:center; width:22px; height:22px}
     .icons svg{width:18px; height:18px}
-    /* Small helpers */
-    .muted{color:var(--muted)}
   </style>
+
   <script>
     // Theme init: auto, light, dark
     (function(){
       try{
         const saved = localStorage.getItem("theme");
-        if(saved === "light" || saved === "dark"){ document.documentElement.setAttribute("data-theme", saved); }
-        else { document.documentElement.setAttribute("data-theme", "auto"); }
+        document.documentElement.setAttribute("data-theme", (saved === "light" || saved === "dark") ? saved : "auto");
       }catch(e){}
     })();
   </script>
-  <!-- JSON-LD for basic SEO. Fill in your details. -->
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
-    "name":"Your Name",
-    "url":"https://your-domain-or-github-pages-url",
-    "image":"https://your-domain-or-github-pages-url/avatar.jpg",
+    "name":"Jon Steinke",
+    "url":"https://j-steinke.github.io",
+    "image":"https://j-steinke.github.io/avatar.jpg",
     "sameAs":[
-      "https://github.com/your-username",
-      "https://www.linkedin.com/in/your-handle",
-      "mailto:you@example.com"
+      "https://github.com/j-steinke",
+      "mailto:jonsteinke@gmail.com"
     ],
-    "jobTitle":"Your Title"
+    "jobTitle":"Law Student"
   }
   </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
   <header>
     <div class="container bar">
       <div class="row">
-        <img class="avatar" src="avatar.jpg" alt="Headshot">
+        <img class="avatar" src="avatar.jpg" alt="Headshot of Jon Steinke, law student at McGeorge" loading="lazy" decoding="async">
         <div>
-          <div class="pill">Open to opportunities</div>
+          <div class="pill">Open to opportunities in the legal field</div>
           <h1 style="margin:6px 0 0; font-size:22px">Jon Steinke</h1>
           <div class="muted">2L at McGeorge School of Law. Sacramento, CA</div>
         </div>
@@ -163,10 +146,9 @@
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
-          <a href="#writing">Writing</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button class="btn-theme" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <button class="btn-theme" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
           <span class="icons" aria-hidden="true">
             <!-- sun -->
             <svg id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -174,7 +156,6 @@
             <svg id="moon" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"/></svg>
           </span>
         </button>
-        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
       </div>
     </div>
   </header>
@@ -182,89 +163,121 @@
   <main id="main" class="container">
     <section class="hero">
       <div>
-        <h1>Law Student who dabbles in Programming</h1>
-        <p>I design and deliver products focused on assisting legal professionals, as well as financial guidance.</p>
+        <h1>Law student who dabbles in programming</h1>
+        <p>I build simple tools for legal professionals and finance hobbyists.</p>
         <div class="spacer"></div>
         <div class="row">
-          <a class="btn" href="https://github.com/j-steinke">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
+          <a class="btn" href="https://github.com/j-steinke" rel="me">GitHub</a>
           <a class="btn" href="mailto:jonsteinke@gmail.com">Email</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Highlights</h2>
+    <section class="section" aria-labelledby="highlights">
+      <h2 id="highlights">Highlights</h2>
       <div class="grid">
-        <div class="card span-4">
+        <article class="card span-4">
           <h3>Law</h3>
-          <div class="meta">I build projects that reolve around real solutions for legal professionals. Legal Citation checker is WIP!</div>
-        </div>
-        <div class="card span-4">
+          <div class="meta">I build projects that revolve around real solutions for legal professionals.</div>
+        </article>
+        <article class="card span-4">
           <h3>Finance</h3>
-          <div class="meta">I build projects that help individuals find the right opprotunities in the market</div>
-        </div>
-        <div class="card span-4">
+          <div class="meta">I prototype tools that help individuals find opportunities in the market.</div>
+        </article>
+        <article class="card span-4">
           <h3>Programming</h3>
-          <div class="meta">Sometimes I build products just for fun!</div>
-        </div>
+          <div class="meta">Sometimes I ship things just for fun.</div>
+        </article>
       </div>
     </section>
 
-    <section id="projects" class="section projects">
-      <h2>Projects</h2>
-      <!-- Edit the data below to update cards without touching markup -->
+    <section id="projects" class="section projects" aria-labelledby="proj">
+      <h2 id="proj">Projects</h2>
+
+      <!-- No-JS static fallback -->
+      <noscript>
+        <div class="grid">
+          <article class="card span-6">
+            <div>
+              <h3>AutoTrader</h3>
+              <div class="meta">A ChatGPT-assisted trading algorithm that uses Tradier’s API and sandbox brokerage to track real-time trades. <strong>WIP</strong>.</div>
+              <div class="tags"><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Python</span></div>
+              <div class="projects links"><span class="muted">Repo coming soon</span></div>
+            </div>
+          </article>
+          <article class="card span-6">
+            <div>
+              <h3>Citation Copilot</h3>
+              <div class="meta">A Bluebook citation helper for legal writing. <strong>WIP</strong>.</div>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span></div>
+              <div class="projects links"><span class="muted">Repo coming soon</span></div>
+            </div>
+          </article>
+          <article class="card span-6">
+            <div>
+              <h3>LockBox</h3>
+              <div class="meta">Local, encrypted password manager designed for desktop. <strong>WIP</strong>.</div>
+              <div class="tags"><span class="tag">TBD</span></div>
+              <div class="projects links"><span class="muted">Repo coming soon</span></div>
+            </div>
+          </article>
+        </div>
+      </noscript>
+
+      <!-- Data-driven cards -->
       <script>
         const PROJECTS = [
           {
             name: "AutoTrader",
-            about: "A ChatGPT based trading algorithim that uses Tradier's API and sandbox brokerage to track real-time trades.",
-            stack: ["FastAPI","Sandlit","Python"],
-            links: [{href:"", label:"Repo"}, {href:"#", label:"Live"}]
+            about: "A ChatGPT-assisted trading algorithm that uses Tradier’s API and sandbox brokerage to track real-time trades. WIP.",
+            stack: ["FastAPI","Streamlit","Python"],
+            links: []
           },
           {
-            name: "Project #2",
-            about: "Coming soon!",
-            stack: ["SQLite","HTMX","Tailwind-lite"],
-            links: [{href:"", label:"Repo"}]
+            name: "Citation Copilot",
+            about: "A Bluebook citation helper for legal writing. WIP.",
+            stack: ["Python","Streamlit"],
+            links: []
           },
           {
-            name: "Project #3",
-            about: "Coming soon!",
-            stack: ["Cloudflare Workers","IndexedDB"],
-            links: [{href:"", label:"Repo"}]
+            name: "LockBox",
+            about: "Local, encrypted password manager for desktop. WIP.",
+            stack: ["TBD"],
+            links: []
           }
         ];
       </script>
-      <div id="projectGrid" class="grid"></div>
+      <div id="projectGrid" class="grid" aria-live="polite"></div>
     </section>
 
-    <section id="experience" class="section">
-      <h2>Experience</h2>
+    <section id="experience" class="section" aria-labelledby="exp">
+      <h2 id="exp">Experience</h2>
       <div class="card">
-        <h3>Law Clerk — Company</h3>
-        <div class="meta">Sacramento · 2023 to Present</div>
+        <h3>Add your roles here</h3>
+        <div class="meta">You can list firms, dates, and a few bullets when ready.</div>
         <ul>
-          <li>Building legal knowledge one step at a time.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Legal Clerk — Company</h3>
-        <div class="meta">Sacramento · 2021 to 2023</div>
-        <ul>
-          <li>Building legal knowledge one step at a time.</li>
+          <li>Example: Conducted legal research and drafted memoranda on X.</li>
+          <li>Example: Assisted with discovery and case management.</li>
         </ul>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h2>Skills</h2>
+    <section id="skills" class="section" aria-labelledby="skillsHeading">
+      <h2 id="skillsHeading">Skills</h2>
       <div class="split">
         <div class="card">
           <h3>Core</h3>
           <div class="tags">
             <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span>
             <span class="tag">React</span><span class="tag">Postgres</span><span class="tag">Docker</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Legal adjacent</h3>
+          <div class="tags">
+            <span class="tag">Legal Research</span><span class="tag">Bluebook</span>
+            <span class="tag">Westlaw</span><span class="tag">Lexis</span>
+            <span class="tag">Citations</span><span class="tag">E-discovery</span>
           </div>
         </div>
         <div class="card">
@@ -276,18 +289,8 @@
       </div>
     </section>
 
-    <section id="writing" class="section">
-      <h2>Writing</h2>
-      <div class="card">
-        <ul>
-          <li><a href="#" rel="noopener">Legal Writing Example #1</a> — WIP!</li>
-          <li><a href="#" rel="noopener">Legal Writing Example #2</a> — WIP!</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
+    <section id="contact" class="section" aria-labelledby="contactHeading">
+      <h2 id="contactHeading">Contact</h2>
       <div class="card">
         <p>Email: <a href="mailto:jonsteinke@gmail.com">jonsteinke@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/j-steinke">@j-steinke</a></p>
@@ -301,19 +304,24 @@
     </div>
   </footer>
 
-  <script>
+  <script defer>
     // Render projects
     (function(){
       const grid = document.getElementById("projectGrid");
-      PROJECTS.forEach(p => {
+      if(!grid || !Array.isArray(window.PROJECTS)) return;
+      window.PROJECTS.forEach(p => {
         const card = document.createElement("article");
         card.className = "card span-6";
+        const links = (p.links||[]).filter(l => l.href);
+        const linksHTML = links.length
+          ? links.map(l=>`<a href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join(" · ")
+          : `<span class="muted">Repo coming soon</span>`;
         card.innerHTML = `
           <div>
             <h3>${p.name}</h3>
             <div class="meta">${p.about}</div>
             <div class="tags">${(p.stack||[]).map(s=>`<span class="tag">${s}</span>`).join("")}</div>
-            <div class="links">${(p.links||[]).map(l=>`<a href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join(" · ")}</div>
+            <div class="projects links">${linksHTML}</div>
           </div>
         `;
         grid.appendChild(card);
@@ -325,6 +333,7 @@
       const btn = document.getElementById("themeToggle");
       const sun = document.getElementById("sun");
       const moon = document.getElementById("moon");
+      if(!btn) return;
 
       function current(){
         const dt = document.documentElement.getAttribute("data-theme");
@@ -345,12 +354,16 @@
       }
       btn.addEventListener("click", toggle);
       updateIcons();
-      matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateIcons);
+      const mq = matchMedia("(prefers-color-scheme: dark)");
+      if(mq.addEventListener){ mq.addEventListener("change", updateIcons); }
+      else if(mq.addListener){ mq.addListener(updateIcons); } // Safari fallback
     })();
 
     // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    (function(){
+      var el = document.getElementById("year");
+      if(el) el.textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>
-
